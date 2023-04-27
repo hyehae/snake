@@ -14,7 +14,8 @@ foodX, foodY 값을 `Math.floor(Math.random()*30)+1`을 이용해 0~30 사이 �
 head가 food에 닿으면 score가 올라가고, snake body가 한 칸 추가되며, foodX foodY의 값을 새로 계산해 위치를 옮긴다.
 #### 2-1-2. keydown
 키보드 화살표로 조작할 수 있도록 `eventListener("keydown")`를 추가한다.<br>
-이 때 velocityX, velocityY를 사용하는데, 이는 후에 snakeX, snakeY 값에 더해지며 snake가 움직일 수 있게 된다.
+이 때 velocityX, velocityY를 사용하는데, 이는 후에 snakeX, snakeY 값에 더해지며 snake가 움직일 수 있게 된다.<br>
+단, 현재 진행방향의 반대방향으로는 이동하지 못한다. (ex. 오른쪽 진행 중 왼쪽으로 전환 불가)
 #### 2-1-3. high score (local storage)
 <pre><code>let highScore = localStorage.getItem("high-score") || 0;
     highScoreElement.innerText = `High Score: ${highScore}`;</code></pre>
@@ -52,6 +53,6 @@ head가 벽에 닿았을 때 반대쪽 벽으로 나오도록 아래 코드를 �
     } else if (snakeY > 30) {
         snakeY = 0;
     }</code></pre>
-body 전체가 반대쪽으로 나올 때 까지 (0,0) 위치에 body 한 칸이 나타나는 버그가 있다.
+head가 아래 또는 오른쪽으로 들어간 후 body 전체가 반대으로 나올 때 까지 (0,0) 위치에 body 한 칸이 나타나는 버그가 있다.
 <hr>
 reference - https://youtu.be/K8Rh5x3c9Pw
