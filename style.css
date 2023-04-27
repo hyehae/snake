@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+body {
+    display: flex;
+    align-items: center; /* 상하 가운데 정렬 */
+    justify-content: center; /* 좌우 가운데 정렬 */
+    min-height: 100vh;
+    background: #FDFADF;
+}
+
+.wrapper {
+    width: 65vmin;
+    height: 70vmin;
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+    overflow: hidden;
+    background: #323d3f;
+}
+
+.game-details {
+    color: beige; 
+    font-size: 1.2rem;
+    font-weight: 500;
+    padding: 20px 27px; /* 상, 좌우 패딩 */
+    display: flex;
+    justify-content: space-between; /* score, high-score 사이 공백*/
+}
+
+.play-board {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template: repeat(30, 1fr) / repeat(30, 1fr); /* 30*30 그리드 */
+    background: #1F2729;
+}
+
+.play-board .food {
+    background: salmon;
+}
+
+.play-board .head {
+    background: skyblue;
+}
