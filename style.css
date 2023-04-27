@@ -8,8 +8,8 @@
 
 body {
     display: flex;
-    align-items: center; /* 상하 가운데 정렬 */
-    justify-content: center; /* 좌우 가운데 정렬 */
+    align-items: center;
+    justify-content: center;
     min-height: 100vh;
     background: #FDFADF;
 }
@@ -28,16 +28,16 @@ body {
     color: beige; 
     font-size: 1.2rem;
     font-weight: 500;
-    padding: 20px 27px; /* 상, 좌우 패딩 */
+    padding: 20px 27px;
     display: flex;
-    justify-content: space-between; /* score, high-score 사이 공백*/
+    justify-content: space-between;
 }
 
 .play-board {
     width: 100%;
     height: 100%;
     display: grid;
-    grid-template: repeat(30, 1fr) / repeat(30, 1fr); /* 30*30 그리드 */
+    grid-template: repeat(30, 1fr) / repeat(30, 1fr);
     background: #1F2729;
 }
 
